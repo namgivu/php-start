@@ -1,4 +1,5 @@
 <?php
+/* challenge ref. https://www.hackerrank.com/challenges/YOUR-CHALLENGE_HERE */
 
 //region IO config
   $SCRIPT_HOME = realpath(dirname(__FILE__)); //get current script path ref. https://stackoverflow.com/a/4645101/248616
@@ -22,9 +23,9 @@
 
 //redirect01 enable below line when submit to hackerrank
 //$PHP_STDIN = 'php://stdin';
-$fi = fopen($PHP_STDIN, 'r');
-$s = fgets($fi);
-fclose($fi);
+$f = fopen($PHP_STDIN, 'r');
+$s = fgets($f);
+fclose($f);
 
-print("Hello, World.\n");
-print($s);
+echo 'Hello, World'.PHP_EOL;
+echo $s.PHP_EOL;
