@@ -1,0 +1,1 @@
+Note when submitted, no preceding blank line is allowed by hackerrank
