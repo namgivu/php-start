@@ -1,5 +1,5 @@
 <?php
-/* challenge ref. https://www.hackerrank.com/challenges/YOUR-CHALLENGE_HERE */
+/* challenge ref. https://www.hackerrank.com/challenges/simple-array-sum/problem */
 
 //region IO config
   $SCRIPT_HOME = realpath(dirname(__FILE__)); //get current script path ref. https://stackoverflow.com/a/4645101/248616
@@ -20,14 +20,20 @@
   //endregion
 
 //endregion IO config
+
 ?>
 
-<?
+<?php
 //redirect01 enable below line when submit to hackerrank
 //$PHP_STDIN = 'php://stdin';
 $f = fopen($PHP_STDIN, 'r');
-$s = fgets($f);
+fscanf($f, "%i", $n);
+$a = array_map('intval', explode(' ', fgets($f)) );
 fclose($f);
 
-echo 'Hello, World'.PHP_EOL;
-echo $s.PHP_EOL;
+$s=0;
+foreach ($a as $i) {
+  $s += $i;
+}
+
+echo $s;
