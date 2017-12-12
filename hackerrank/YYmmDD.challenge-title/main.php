@@ -7,12 +7,11 @@
 
   //region redirect stdout to file ref. https://stackoverflow.com/a/13260825/248616
   $ob_file = fopen($FILE_OUT,'w');
-  ob_start('ob_file_callback');
-  function ob_file_callback($buffer)
-  {
-      global $ob_file;
-      fwrite($ob_file,$buffer);
-  }
+  $ob_file_callback = function($buffer) {
+    global $ob_file;
+    fwrite($ob_file, $buffer);
+  };
+  ob_start($ob_file_callback);
   //endregion
 
   //region redirect stdin to file ref. TODO
