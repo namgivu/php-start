@@ -15,12 +15,14 @@
   //endregion
 
   //region redirect stdin to file TODO ref. https://stackoverflow.com/q/47771547/248616
+  $PHP_STDIN = $FILE_IN; //redirect00 simulate the redirect by stream value
   //endregion
 
 //endregion IO config
 
-
-$fi = fopen('php://stdin', 'r');
+//redirect01 enable below line when submit to hackerrank
+//$PHP_STDIN = 'php://stdin';
+$fi = fopen($PHP_STDIN, 'r');
 $s = fgets($fi);
 fclose($fi);
 
