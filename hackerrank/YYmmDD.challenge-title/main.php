@@ -21,7 +21,7 @@ function ob_file_callback($buffer)
 ////endregion IO config
 
 
-$fi = fopen("php://stdin", "r");
+$fi = fopen('php://stdin', 'r');
 $s = fgets($fi);
 fclose($fi);
 
