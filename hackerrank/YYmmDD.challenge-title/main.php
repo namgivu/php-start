@@ -14,7 +14,7 @@
   ob_start($ob_file_callback);
   //endregion
 
-  //region redirect stdin to file ref. TODO
+  //region redirect stdin to file TODO ref. https://stackoverflow.com/q/47771547/248616
   //endregion
 
 //endregion IO config
