@@ -1,7 +1,7 @@
 <?php
 
-$a=[]; echo getEmptyCheckedValue('isEmpty', $a), PHP_EOL;
-$a=[null]; echo getEmptyCheckedValue('isEmpty', $a), PHP_EOL;
+$a=[];       echo getEmptyCheckedValue('isEmpty', $a), PHP_EOL;
+$a=[null];   echo getEmptyCheckedValue('isEmpty', $a), PHP_EOL;
 $a=[[null]]; echo getEmptyCheckedValue('isEmpty', $a), PHP_EOL;
 
 $a=[[null]]; $c=implode($a); echo $c.PHP_EOL;
