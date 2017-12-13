@@ -22,7 +22,7 @@
 //endregion IO config
 ?>
 
-<?
+<?php
 //redirect01 enable below line when submit to hackerrank
 //$PHP_STDIN = 'php://stdin';
 $f = fopen($PHP_STDIN, 'r');
