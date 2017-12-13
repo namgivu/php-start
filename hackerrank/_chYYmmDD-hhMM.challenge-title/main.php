@@ -1,5 +1,5 @@
 <?php
-/* challenge ref. https://www.hackerrank.com/challenges/YOUR-CHALLENGE_HERE */
+/* challenge ref. https://www.hackerrank.com/challenges/YOUR_CHALLENGE_HERE */
 
 //region IO config
   $SCRIPT_HOME = realpath(dirname(__FILE__)); //get current script path ref. https://stackoverflow.com/a/4645101/248616
@@ -10,7 +10,7 @@
   $ob_file = fopen($FILE_OUT,'w');
   $ob_file_callback = function($buffer) {
     global $ob_file;
-    fwrite($ob_file, trim($buffer));
+    fwrite($ob_file, trim($buffer,"\n"));
   };
   ob_start($ob_file_callback);
   //endregion
@@ -29,5 +29,4 @@ $f = fopen($PHP_STDIN, 'r');
 $s = fgets($f);
 fclose($f);
 
-echo 'Hello, World'.PHP_EOL;
-echo $s.PHP_EOL;
+echo 'Hello, World'.$s.PHP_EOL;
