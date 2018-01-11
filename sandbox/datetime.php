@@ -17,3 +17,12 @@ echo $d  ->format('Y-m-d H:i:s').PHP_EOL;
 var_dump($now < $d);
 var_dump($now > $d);
 var_dump($now == $d);
+
+$d->setTime(23, 59, 59);
+echo $d  ->format('Y-m-d H:i:s').PHP_EOL;
+
+#string to datetime ref. https://stackoverflow.com/a/8063137/248616
+echo ''.PHP_EOL;
+$s='2018-11-22 22:44:55';
+$d = DateTime::createfromformat('Y-m-d H:i:s', $s); #string to datetime ref. https://stackoverflow.com/a/8656536/248616
+echo $d  ->format('Y-m-d H:i:s').PHP_EOL;
