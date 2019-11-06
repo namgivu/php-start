@@ -10,6 +10,9 @@ class Point {
         return "Diem {$this->name}";
     }
 
+    public function __construct($initial_name){
+        $this->name = $initial_name;
+    }
 }
 
 class Line {
@@ -19,9 +22,17 @@ class Line {
     public function __toString() {
         return "Duong thang noi {$this->A} va {$this->B}";
     }
+
+    public function __construct($initial_A, $initial_B) {
+        $this->A = $initial_A;
+        $this->B = $initial_B;
+    }
 }
 
-$A = new Point(); $A->name='A'; echo $A."\n";
-$B = new Point(); $B->name='B'; echo $B."\n";
+$A = new Point('X'); echo $A."\n";
+$B = new Point('Y'); echo $B."\n";
+$dt = new Line($A, $B); $dt->A = $A; $dt->B = $B; echo $dt."\n";
 
-$dt = new Line(); $dt->A = $A; $dt->B = $B; echo $dt."\n";
+$C = new Point('C');
+$D = new Point('D');
+$dt2 = new Line($C, $D); echo $dt2."\n";
